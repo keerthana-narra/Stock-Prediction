@@ -137,7 +137,7 @@ In which the null value is filled by the average of above and below values. This
 
 The primary goal of EDA is to support the analysis of data prior to making any conclusions. It may aid in the detection of apparent errors, as well as a deeper understanding of data patterns, the detection of outliers or anomalous events, and the discovery of interesting relationships between variables.
 
-## 3.1 Plotting a multi line plot
+### 3.1 Plotting a multi line plot
 
 #Plotting a multi line plot
 plt.figure(figsize=(36, 10)) 
@@ -148,14 +148,14 @@ lines= nifty[:].plot.line()
 From the above graphs, we have observed that-
 There was a drastic drop in stock prices in the 2007-2009 period.This  can be attributed to the Great Recession that happened during this period. Also, there is a drop in stock prices in the year 2016. This can be attributed to Demonetisation drive by the central government.Again ,there is a drastic drop in stock prices in 2020. This is due to the global breakdown amid coronavirus pandemic induced lockdown in India.By the end of 2020, the stock price started rising.This can be attributed to the lifting of lockdown in the country and across the world.
 
-## 3.2 Box Plot
+### 3.2 Box Plot
 
 #box plot
 sns.boxplot(data=nifty[['Open','High','Low','Close']])
 
 From the above box plots we can infer that the data of the features of a taken are more or less similar. There are no outlier observations which need to be appreciated.
 
-## 3.3 Correlation Plot
+### 3.3 Correlation Plot
 
  
 #Get correlation among different features viz. Open,High,Low and Close
@@ -166,7 +166,7 @@ The correlation seen between these variables is almost 1.
 
 Understanding more about the Close feature as our objective is to predict the Close feature and Target variable.
 
-## 3.4 Line plot
+### 3.4 Line plot
 
 #plot close price
 close = nifty['Close']
@@ -178,7 +178,7 @@ plt.plot( close.index, close.values, marker='', color='#FF2511', linewidth=3)
 plt.title('Nifty closing price')
 plt.show()
 
-## 3.5 Bar plot
+### 3.5 Bar plot
 
 GB = final_df.groupby([final_df.index.year])
 GB['Target'].value_counts().unstack().plot(kind= 'bar',figsize=(15,7))
@@ -189,7 +189,7 @@ This bar plot represents the total number of up and down seen in each  year of p
 
 
 
-## 3.6 Lag plot 
+### 3.6 Lag plot 
 
 #Lag plot
 from pandas.plotting import lag_plot
